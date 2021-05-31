@@ -32088,6 +32088,10 @@ select {
   --tw-backdrop-sepia: sepia(100%);
 }
 
+.container * + * {
+  margin-top: 1rem;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
