@@ -28,7 +28,7 @@
         <div class="pt-6">{!! $recipe->description !!}</div>
 
         <div class="border w-6/12 mx-auto">
-            <table class="table-auto w-full">
+            <table class="table-auto w-full">  
                 <thead>
                     <tr class="bg-blue-300">
                         <td class="p-2">
