@@ -1,0 +1,2 @@
+shopt -s expand_aliases
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
