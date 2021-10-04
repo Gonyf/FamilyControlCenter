@@ -22,7 +22,7 @@ class RecipeFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
+            'name' => $this->faker->text(),
             'minutes' => rand(20,120),
             'description' => $this->faker->text(),
             'guide' => $this->faker->text(),
