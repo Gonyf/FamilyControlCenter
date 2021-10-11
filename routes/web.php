@@ -15,6 +15,4 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('recipe', RecipeController::class);
 });
 
-
-
 require __DIR__.'/auth.php';
