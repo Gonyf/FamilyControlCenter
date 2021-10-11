@@ -5,14 +5,11 @@
         </h2>
     </x-slot>
     <div class="container mx-auto">
-        <div class="flex flex-wrap">
-
-
-
+        <div class="flex flex-wrap m-8">
             @foreach ($recipes as $recipe)
-            <div class=" flex-none w-4/12">
+            <div class=" flex-none w-3/12">
                 <a href="{{ $recipe->route() }}">
-                    <div class="p-5 shadow-lg rounded-lg bg-white m-2">
+                    <div class="p-5 shadow-lg rounded-lg bg-white m-4">
                         {{ $recipe->name }}
                     </div>
                 </a>

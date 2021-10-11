@@ -1,29 +1,27 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Recipes') }}
-        </h2>
-    </x-slot>
     <x-slot name="headScripts">
         <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
         <script type="text/javascript">
             window.onload = function() {
                 console.log(CKEDITOR.config);
-                CKEDITOR.config.removeButtons = 'Image'; 
-                CKEDITOR.config.removePlugins = ['Image', 'uploadimage']; 
+                CKEDITOR.config.removeButtons = 'Image';
+                CKEDITOR.config.removePlugins = ['Image', 'uploadimage'];
             };
         </script>
-
     </x-slot>
     <div class="container p-6 mx-auto">
-        <h1 class="text-2xl">{{ $recipe->name }}</h1>
-        <div class="">
-            <span>
-                {{ __('recipes.minutes') }} {{ $recipe->minutes}}
-            </span>
-            <span class="ml-10">
-                {{ __('recipes.servings') }} {{ $recipe->servings}}
-            </span>
+        <div class="text-center">
+            <div class="inline-block border-green-600 border-4 rounded-tl-3xl rounded-tr-3xl px-24 py-3">
+                <div class="text-2xl">{{ $recipe->name }}</div>
+                <div class="">
+                    <span>
+                        {{ __('recipes.minutes') }} {{ $recipe->minutes}}
+                    </span>
+                    <span class="ml-10">
+                        {{ __('recipes.servings') }} {{ $recipe->servings}}
+                    </span>
+                </div>
+            </div>
         </div>
         <div class="pt-6">{!! $recipe->description !!}</div>
 
