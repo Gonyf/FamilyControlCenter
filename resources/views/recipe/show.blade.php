@@ -1,4 +1,14 @@
 <x-app-layout>
+    <x-slot name="headScripts">
+        <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+        <script type="text/javascript">
+            window.onload = function() {
+                console.log(CKEDITOR.config);
+                CKEDITOR.config.removeButtons = 'Image';
+                CKEDITOR.config.removePlugins = ['Image', 'uploadimage'];
+            };
+        </script>
+    </x-slot>
     <div class="container p-6 mx-auto">
         <div class="text-center">
             <div class="inline-block border-green-600 border-4 rounded-tl-3xl rounded-tr-3xl px-24 py-3">
@@ -50,5 +60,4 @@
 
         <div class="pt-6">{!! $recipe->guide !!}</div>
     </div>
-
 </x-app-layout>
